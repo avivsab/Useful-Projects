@@ -1,3 +1,3 @@
 # Portfolio
-Upload Projects in built portfolio
-Builting app with simple JS (most of the syntax is ES5) and make a responsive styling with simple relative positions
+First JavaScript project - creating tasks noets on board with old style js and without ES6/querySelectors.
+Vanilla JS (most of the syntax is ES5).
