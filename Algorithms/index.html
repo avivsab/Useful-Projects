@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Algorithm with JS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Developing efficiant thinking By planing code</h1>
+        <h1><em> Algorithm examples with JS</em></h1>
+        <h2>Open the <u title="press (option-cmd-I)">console</u> to see calculation result</h2>
+    </header>
+        <div id="btnWrap">
+            <button id="fizz" onclick="fizzBuzz(50)">Fizz-Buzz</button>
+            <button id="hrNote" onclick="harmlessRansomNote('this is a secret note for you from a secret admirer', 'puerto rico is a place of great wonder and excitement it has many secret waterfall locatoins that i am an admirer of you must hike quite a distance to find the secret places as they are far from populated areas but it is worth the effort a tip i have for you is to go early in the morning when it is not so hot out also note that you must wear hiking boots this is one of the best places i have ever visited')">Harmless Ransom Note</button>
+            <button id="palindrome" onclick="isPalindrome('race car')">Is palindrome</button>
+            <button id="caesarCipher" onclick="caesarCipher('Zoo Keeper', 2)">Caesar Cipher</button>
+            <button id="reverseWords" onclick="reverseWords('Zoo Keeper')">Revers The Word</button>
+            <button id="reverseArray" onclick="reverseArray([1,2,3,4,5,6,7])">Reversing Array</button>
+            <button id="meanMedianMode" onclick="console.log(meanMedianMode([1,2,3,4,5,10,10,5]))">Several Functions</button>
+            <button id="twoSum" onclick="twoSum([1,2,3,4,5,10,10,5], 5)">Find Pairs</button>
+            <button id="twoSum2" onclick="twoSum2([1,2,3,4,5,10,10,5], 5)">Find Pairs Efficiant</button>
+            <button id="factorial" onclick="factorial(5)">Factorial With global scope</button>
+            <button id="factorial2" onclick="console.log(factorial2(5))">Factorial With no global scope</button>
+        </div>
+    <div id="explain"></div>
+    <code id="code"></code>
+    <!-- <script src="app.js"></script> -->
+</body>
+</html>
