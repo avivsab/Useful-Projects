@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Small Ajax request with Jquery</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styleusers.css">
+   
+</head>
+
+
+<body>
+    <header>
+        <h1>Random User Client</h1>
+        <button id="getUser">GET ANOTHER USER</button>
+    </header>
+        <div id="container"></div>
+
+    <script>
+        for (let index = 0; index < 2; index++) {
+            $(document).ready(getUserFun);
+        }
+
+        $('#getUser').on('click', getUserFun);
+
+        function getUserFun() {
+            $.ajax({
+                url: 'https://randomuser.me/api/',
+                dataType: 'json',
+                success: function (data) {
+                    console.log(data);
+                    console.log(data.results[0].picture.medium);
+                    $('#container').append(
+                      `<div id='user'>
+                        <div id='imgDiv' style='width:100%'><img id ='userImg'src='${data.results[0].picture.large}' style='height: 40%;margin: 10px;'></div>
+                        <ul>
+                        <li><b> gender:</b> ${data.results[0].gender}</li>
+                        <li id='edName'><b> name:</b> ${data.results[0].name.first} ${data.results[0].name.last}</li>
+                        <li><b> age:</b> ${data.results[0].gender}</li>
+                        <li id='email'><b> email:</b><u> ${data.results[0].email}</u></li>
+                        <button class='delBtn'>Del</button>
+                        <button class='editBtn'>Edit</button>
+                        </ul>
+                       </div>`
+                    );
+                    $('.delBtn').on('click', function () {
+                        $(this).parent().parent().hide();
+                    });
+                    $('.editBtn').on('click', function (e) {
+                        e.stopImmediatePropagation()
+                        $(this).after(
+                            "<p>new name: <input type='text' class='newTxt' name='newName'></p><p>new email: <input type='email' name='mail'></p><button class='changeBtn'>OK</button>"
+                        )
+                        $('.changeBtn').on('click', function () {
+                            var newName = $("input[name='newName']").val();
+                            var newMail = $("input[name='mail']").val();
+                            if (newName) {
+                                $(this).parent()[0].children[1].innerHTML =
+                                    `name: ${newName}`;
+                            };
+                            if (newMail) {
+                                $(this).parent()[0].children[3].innerHTML =
+                                    `mail: ${newMail}`;
+                            }
+                            $('p').remove();
+                            $(this).remove();
+                            console.log(this)
+                        });
+                    })
+                }
+            });
+
+        };
+    </script>
+</body>
+
+</html>
