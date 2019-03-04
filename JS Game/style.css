@@ -1,0 +1,41 @@
+body {
+                
+    font-family: sans-serif;
+    background-color:  #847ca3;
+    cursor: vertical-text;
+    
+}
+header{
+    text-align: center;
+    color: aliceblue;
+}
+#playGround{
+    width: 1000px;
+    height: 700px;
+    border: 1px darkgray solid;
+    z-index: 3;
+    margin: 50px auto;
+    border-radius: 23px;
+}
+#shape {
+    
+    width: 100px;
+    height: 100px;
+    background-image: url('https://images.embroidery.com/images/98000/98900/98905.gif');
+    display: none;
+    position: relative;
+    border: 1px solid whitesmoke;
+    cursor: cell;
+    
+}
+
+.bold {
+
+    font-weight: bold;
+    
+}
+#toMuchTime{
+    color: transparent;
+    font-size: 25px;
+    font-weight: bold;
+}
