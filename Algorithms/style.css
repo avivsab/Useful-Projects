@@ -1,0 +1,26 @@
+body{
+    text-align: center;
+    margin: 10px;
+    /* background-image: url('https://d2r55xnwy6nx47.cloudfront.net/uploads/2017/10/StreamAnalysis_2880x1620-2880x1620.jpg'); */
+    background-image: url('./alg-back-ground.jpg');
+}
+header{
+    color: darkcyan;
+}
+#code{
+    width: 700px;
+    height: fit-content;
+    border: 1px solid saddlebrown;
+    background-color: #ccc;
+    display: inline-grid;
+}
+
+#explain{
+    margin: 25px;
+    font-size: 20px;
+    color: #ccc;
+}
+
+u:hover{
+    color: bisque;
+}
