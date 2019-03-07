@@ -74,7 +74,7 @@ function fizzBuzz(num) {
     
     console.log(lettersArr.join('') === lettersArr.reverse().join('')); console.log( `${lettersArr.join('')} is palindrom`);
     document.getElementById('explain').innerHTML = 'palindrome is a word you can read back and forword and it stays the same.<br><br> You can learn from the code how to solve complex problems easily using JS built-in methods.'
-    document.getElementById('code').innerHTML = '';
+    document.getElementById('code').innerHTML = 'See source code in app.js and check the console';
   }
    
   // isPalindrome("Madam, I'm Adam");
@@ -104,7 +104,7 @@ function fizzBuzz(num) {
     
     console.log(str , 'become ' + newString + ' when passing number ' + num + ' as parameter.');
     document.getElementById('explain').innerHTML = 'In Caesar Cipher, the number that pass as parameter to function change the letters in a string acording to that number, and another sring is creating in alphabetic order.<br><small>(See example in the console).</small> <br><br> You can learn how to solve problems by calculation and by using the modulus operator insted running new functions for edge cases. '
-
+    document.getElementById('code').innerHTML = '';
   }
 
   function reverseWords(string) {
@@ -123,6 +123,7 @@ function fizzBuzz(num) {
   });
   console.log(`${arrWords} become ${reverseWordsArray.join(' ')}`);
   document.getElementById('explain').innerHTML = 'The beautiful thing in the reverse word is the way using the For Loop that saves you from square thinking.';
+  document.getElementById('code').innerHTML = '';
 }; 
 
 function reverseArray(arr) {
@@ -133,6 +134,7 @@ function reverseArray(arr) {
     arr[arr.length - 1 - i] = tempVar;
   }
   document.getElementById('explain').innerHTML = 'Reversing array teaching to manipulate an array using temp variable and iterating throw the same array.<br><small>See progress of the process in the console.</small>'
+  document.getElementById('code').innerHTML = '';
   console.log(arr);
 }
 
@@ -142,8 +144,10 @@ function meanMedianMode(array) {
     mean: getMean(array),
     median: getMedian(array),
     mode: getMode(array),
-    mesagge:  message
-  }
+    mesagge:  message,
+    
+  },
+  document.getElementById('code').innerHTML = '';
 }
  
 function getMean(array) {
@@ -208,6 +212,7 @@ function twoSum(array, num) {
   }
   console.log(newArr);
   document.getElementById('explain').innerHTML = 'The functionality of find pairs in array achive in the code but its not efficiant (Time complexcity O(n<sup>2</sup>).)';
+  document.getElementById('code').innerHTML = '';
 }
  
 function twoSum2(numArray, sum) {
@@ -223,6 +228,7 @@ function twoSum2(numArray, sum) {
     hashTable.push(currNum);
   }
   document.getElementById('explain').innerHTML = 'The functionality of find pairs in array achive in the code is efficiant (Time complexcity O(n).)';
+  document.getElementById('code').innerHTML = '';
   console.log(pairs);
 }
 let multy = 1;
@@ -246,3 +252,23 @@ function factorial2(num) {
     return num * factorial2(num-1)
   }
 }
+
+
+function styleWithBootstrap() {
+  document.addEventListener('DOMContentLoaded', function () {
+
+    let btn = document.querySelectorAll("button")
+    
+    let i=0;
+    for (var colorBtn of btn) {      
+      if (i%2===0){
+        colorBtn.className = "btn btn-primary";
+      } else {
+        colorBtn.className = "btn btn-success"   
+      }
+      i++;
+    }
+});
+  
+}
+  styleWithBootstrap();
