@@ -1,5 +1,6 @@
-	let message = '';
+		let message = '';
 	const calc_growth = (invest, currentVal) => (currentVal - invest) / invest * 100;
+	// console.log(calc_growth(100,200));
 	const todayVal = document.querySelector('.investment__btn');
 	todayVal.addEventListener('click', function () {
 		const shekelToUsdBuy = document.querySelector('.price__input--bought').value;
@@ -15,7 +16,7 @@
 				result.style.color = 'red';
 			} else {
 				message = 'you are even';
-				
+				result.style.color = 'orange';
 			}
 			if (! shekelToUsdBuy || !shekelUsdToday) {
 				result.innerHTML = "Can't calculate";
