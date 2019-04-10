@@ -37,7 +37,7 @@ function fizzBuzz(num) {
       else noteIsPossible = false; 
     });
     
-    console.log(noteIsPossible, ' True means all words in the note found in the paragraph, "false" means that not all the words found in the note');
+    console.log(noteIsPossible, ' "true" means all words in the note found in the paragraph, "false" means that not all the words found in the note');
     document.getElementById('explain').innerHTML = 'Harmless Random Note is an examle to search matching words from two sources.<br><br> You can learn from the algorithm about Binary search, Big O notation, Time complexity and from the code you can learn about forEach loop and the importance to avoid nested loops.'
     document.getElementById('code').innerHTML = `
     function harmlessRansomNote(noteText, magazineText) {
@@ -103,7 +103,7 @@ function fizzBuzz(num) {
     };
     
     console.log(str , 'become ' + newString + ' when passing number ' + num + ' as parameter.');
-    document.getElementById('explain').innerHTML = 'In Caesar Cipher, the number that pass as parameter to function change the letters in a string acording to that number, and another sring is creating in alphabetic order.<br><small>(See example in the console).</small> <br><br> You can learn how to solve problems by calculation and by using the modulus operator insted running new functions for edge cases. '
+    document.getElementById('explain').innerHTML = 'In Caesar Cipher, the number that pass as parameter to function change the letters in a string acording to that number, and another sring is creating in alphabetic order.<br><small>(See example in the console).</small> <br><br> You can learn how to solve problems by calculation and by using the modulus operator instead of creating new functions to solve edge cases problems. '
     document.getElementById('code').innerHTML = '';
   }
 
@@ -122,7 +122,7 @@ function fizzBuzz(num) {
    
   });
   console.log(`${arrWords} become ${reverseWordsArray.join(' ')}`);
-  document.getElementById('explain').innerHTML = 'The beautiful thing in the reverse word is the way using the For Loop that saves you from square thinking.';
+  document.getElementById('explain').innerHTML = 'The beautiful thing in the reverse word is the way using the "for()" loop that saves you from being squre in the way of thinking.';
   document.getElementById('code').innerHTML = '';
 }; 
 
@@ -133,13 +133,13 @@ function reverseArray(arr) {
     arr[i] = arr[arr.length - 1 - i];
     arr[arr.length - 1 - i] = tempVar;
   }
-  document.getElementById('explain').innerHTML = 'Reversing array teaching to manipulate an array using temp variable and iterating throw the same array.<br><small>See progress of the process in the console.</small>'
+  document.getElementById('explain').innerHTML = 'Reversing array teaching to manipulate an array using temp variable and iterate throw the same array.<br><small>See progress of the process in the console.</small>'
   document.getElementById('code').innerHTML = '';
   console.log(arr);
 }
 
 function meanMedianMode(array) {
-  const message = document.getElementById('explain').innerHTML = 'Several tasks done with one call, array\'s meam, median, and max appirance check.<br>Planing the right functionality with functional programming and reusable code'
+  const message = document.getElementById('explain').innerHTML = 'Several tasks done with one call, array\'s meam, median, and max appirance check.<br>Shows right Planing of the program functionality using functional programming and reusable code'
   return {
     mean: getMean(array),
     median: getMedian(array),
@@ -211,7 +211,7 @@ function twoSum(array, num) {
    }
   }
   console.log(newArr);
-  document.getElementById('explain').innerHTML = 'The functionality of find pairs in array achive in the code but its not efficiant (Time complexcity O(n<sup>2</sup>).)';
+  document.getElementById('explain').innerHTML = 'The functionality of find pairs in array achive in the code but it is not efficiant (Time complexcity O(n<sup>2</sup>).)';
   document.getElementById('code').innerHTML = '';
 }
  
@@ -227,7 +227,7 @@ function twoSum2(numArray, sum) {
     }
     hashTable.push(currNum);
   }
-  document.getElementById('explain').innerHTML = 'The functionality of find pairs in array achive in the code is efficiant (Time complexcity O(n).)';
+  document.getElementById('explain').innerHTML = 'The functionality of find pairs in array achive in the code in efficiant way (Time complexcity O(n).)';
   document.getElementById('code').innerHTML = '';
   console.log(pairs);
 }
