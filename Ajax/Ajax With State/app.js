@@ -19,15 +19,15 @@ const USER_API_URL = 'https://randomuser.me/api';
             function createUserElement(user) {
                  $user = `                  
                      
-                     <ul class="group-list">
+                     
                        <li class='group-list-item'>
                             <img src="${user.picture.large}"/>                           
                                 <p>${user.name.first} ${user.name.last}</p>
                                 <p>${user.email}</p>                                                              
                         </li>
-                        </ul>                         
+                                               
                     `
-                $('.container').append($user);
+                $('.group-list').append($user);
             }
         }
         function hideUsers() {
