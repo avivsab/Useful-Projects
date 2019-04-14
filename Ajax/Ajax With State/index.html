@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Random Users!</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <h1> Random Users With state & Bootstrap</h1>
+        <botton onclick="getUser()" class="btn btn-primary"> Get User</botton>
+        <botton onclick="hideUsers()" class="btn btn-success"> Hide All</botton>
+    </header>
+    <div>
+    <botton onclick="showState()" class="btn btn-info"> display Current State</botton>
+    <div class="stateContainer"></div>
+</div>
+    <div class="container"></div>
+    
+    <script>
+         $('body').on('click', hideState);
+    </script>
+</body>
+
+</html>
