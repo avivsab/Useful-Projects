@@ -14,11 +14,10 @@ const USER_API_URL = 'https://randomuser.me/api';
                     console.log(user);
                     console.log('state:' , state.users)
                 }
-
             });
 
             function createUserElement(user) {
-                const $newuser = `                  
+                 $user = `                  
                      
                      <ul class="group-list">
                        <li class='group-list-item'>
@@ -28,7 +27,7 @@ const USER_API_URL = 'https://randomuser.me/api';
                         </li>
                         </ul>                         
                     `
-                $('.container').append($newuser);
+                $('.container').append($user);
             }
         }
         function hideUsers() {
@@ -40,14 +39,13 @@ const USER_API_URL = 'https://randomuser.me/api';
             const curentUsers = state.users;
             let maleNum = 0;
             let femaleNum = 0;
-            curentUsers.forEach((user,i) =>{
-               
+            curentUsers.forEach((user,i) =>{               
                 curentUsers[i].gender === "male" ? maleNum++ : femaleNum++ 
             })
             const stateContainer = $('.stateContainer');
             stateContainer.html(`
             <p><u>Users Number:</u> ${state.users.length}</p>
-            <i>Male: ${maleNum}</i>
+            <span>Male: ${maleNum}</span>
             <p>Female: ${femaleNum}</p>          
             `);         
         }
