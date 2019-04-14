@@ -11,23 +11,19 @@
 
       <!-- Compiled and minified JavaScript -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-         <style>
-             .card .card-content{
-                 width: -0.5rem;
-                 padding: none;
-             }
-         </style>     
+      
     <title>Fetch API's</title>
 </head>
 <body>
     <a class="waves-effect waves-light btn getUser"><i class="material-icons left">cloud</i>User From Cloud</a>
-    <div class="container"></div>
+    
+    <div class="container"> <i class="medium material-icons" onclick="initalView()">adjust</i></div>
+   
     <script>
         const state = {
             user: null,
             users:[]
         };
-
         function loadUser() {
             const URL = 'https://randomuser.me/api/';
             const requestUser = fetch(URL);
@@ -37,35 +33,36 @@
                 state.user = data.results[0];
                 state.users.push(data.results[0])
             });
-        }
-
+        };
         loadUser();
         const container = document.getElementsByClassName('container')[0];
         document.querySelector('.getUser').onclick = () => {
             console.log(state.user);
             loadUser();
             const user = `
-            <div class="col s12 m7">
-            <h5 class="header">Random User</h5>
-            <div class="card horizontal">
-              <div class="card-image">
-                <img src="${state.user.picture.medium}">
-              </div>
-              <div class="card-stacked">
-                <div class="card-content">
-                  <p>I am a very simple card. I am good at containing small bits of information.</p>
-                </div>
-                <div class="card-action">
-                  <a href="#">This is a link</a>
-                </div>
-              </div>
-            </div>
+            <div class="col s12 m8 offset-m2 8 offset-l3">
+    <div class="card-panel grey lighten-5 z-depth-1">
+      <div class="row valign-wrapper">
+        <div class="col s2">
+          <img src="${state.user.picture.medium}" alt="Random user" class="circle responsive-img"> <!-- notice the "circle" class -->
+        </div>
+        <div class="col s10">
+          <span class="black-text">
+            This is a image of <span style="color: chocolate">${state.user.name.first} ${state.user.name.last}</span>. Add the "circle" class to it to make it appear circular.
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+        
             `
             container.innerHTML += user;
-            return user; 
-            
-        }
-    </script>
-          <!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
+            return user;       
+        };       
+        function initalView(){          
+            container.innerHTML = ' <i class="medium material-icons" onclick="initalView()">adjust</i>';
+        };
+    </script>  
 </body>
 </html>
+
