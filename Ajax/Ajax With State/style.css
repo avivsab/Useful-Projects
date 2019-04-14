@@ -35,4 +35,5 @@ header h1 {
     margin-left: 2rem;
     opacity: 0;
     padding-left: 1rem;
+    transition: opacity 0.5s;
 }
