@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import DoNotItem from './successItem';
+import SuccessItem from './SuccessItem';
 
 
 class NotTodos extends Component {
@@ -7,7 +7,7 @@ class NotTodos extends Component {
   render() {
       console.log(this.props.notDo)
     return this.props.notDo.map((item) => (
-          <DoNotItem key={item.id} notDo={item}  onManeged={this.props.onManeged} removeNotItem={this.props.removeNotItem} />
+          <SuccessItem key={item.id} notDo={item}  onManeged={this.props.onManeged} removeNotItem={this.props.removeNotItem} />
       )
     )};
    
