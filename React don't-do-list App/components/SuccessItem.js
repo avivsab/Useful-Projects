@@ -1,15 +1,17 @@
 import React, { Component } from 'react'
 
-export class successItem extends Component {
+export class SuccessItem extends Component {
+   
   getStyle = () => {
       return {
-        textDecoration: this.props.notDo.isManagedTo?  'line-through' : 'none',
+        textDecoration: !this.props.notDo.isActive?  'line-through' : 'none',
         background: '#cccdd',
         padding: '10px',
         border: '1px solid #bbb',
         marginTop: '10px'
       }
 }
+
   render() {
 
     const {id, title} = this.props.notDo; //destructuring
@@ -32,4 +34,5 @@ const btnCss = {
   cursor: 'pointer',
   float: 'right',
 }
-export default successItem
+export default SuccessItem
+
