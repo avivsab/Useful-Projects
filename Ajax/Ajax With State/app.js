@@ -51,6 +51,5 @@ const USER_API_URL = 'https://randomuser.me/api';
                   $('.stateContainer')[0].style.opacity = 0 
             }
         }
-       
-
+        
         getUser();
