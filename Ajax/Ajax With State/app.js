@@ -17,15 +17,12 @@ const USER_API_URL = 'https://randomuser.me/api';
             });
 
             function createUserElement(user) {
-                 $user = `                  
-                     
-                     
+                 $user = `                                       
                        <li class='group-list-item'>
                             <img src="${user.picture.large}"/>                           
                                 <p>${user.name.first} ${user.name.last}</p>
                                 <p>${user.email}</p>                                                              
-                        </li>
-                                               
+                        </li>                                             
                     `
                 $('.group-list').append($user);
             }
