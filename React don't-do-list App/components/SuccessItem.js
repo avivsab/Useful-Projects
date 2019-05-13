@@ -21,12 +21,12 @@ export class SuccessItem extends Component {
       <div style={this.getStyle()}>              
         <input type='checkbox' onChange={this.props.onManeged.bind(this, id)} />{' '}       
         {title}    
-        <button style={btnCss} onClick={this.props.removeNotItem.bind(this, id)}>X</button>  
+        <button style={delBtnCss} onClick={this.props.removeNotItem.bind(this, id)}>X</button>  
       </div>
     )
   }
 }
-const btnCss = {
+const delBtnCss = {
   background: '#00ff11',
   border: 'none',
   borderRadius: '5px',
