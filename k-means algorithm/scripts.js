@@ -4,6 +4,10 @@
     const changeBackGround = document.querySelector('#changeAppleDiv');
     const initBtn = document.querySelector('#initBtnView');
 
+        showFieldBtn.addEventListener('click', showFiled); 
+        changeBackGround.addEventListener('click', changeClustersField);
+        initBtn.addEventListener('click', initialView);
+
          function showFiled() {
             document.getElementById('surfaceDiv').style.backgroundImage = '';
             document.querySelector('#surfaceDiv').style.backgroundColor = '#fff';
@@ -30,8 +34,7 @@
             document.querySelector('#surfaceDiv').style.opacity = 0.95;
             document.querySelector('#headline').style.color = '#addfff';
          };
-
-       
+ 
         clusterBorders.forEach((el) => {
             el.addEventListener('click', () => {
                 el.style.opacity = 1;
@@ -43,9 +46,5 @@
                 el.style.opacity = 0;
             }, true)
         });
-        
-        showFieldBtn.addEventListener('click', showFiled); 
-        changeBackGround.addEventListener('click', changeClustersField);
-        initBtn.addEventListener('click', initialView);
 
        
