@@ -1,1 +1,1 @@
-Using fetch for receiving data from API
+Using fetch() method for receiving the data from the API (without Jquery).
