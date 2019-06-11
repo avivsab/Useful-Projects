@@ -1,1 +1,1 @@
-Beautiful calculator for investment in dollar. Using ES6 syntax.
+Profit calculator for investment in foreign exchange. Written with ES6 syntax.
