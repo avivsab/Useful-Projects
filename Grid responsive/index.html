@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsive Grid</title>
+</head>
+<style>
+    .wrapper {
+        display: grid;
+        grid-template-columns:repeat(4, minmax(300px, 1fr));
+        grid-gap: 1em;
+        
+    }
+    @media screen and (max-width: 1260px) {
+        .wrapper {
+            display: grid;
+            grid-template-columns:repeat(3, minmax(300px, 1fr));
+            grid-gap: 2em;
+            
+        }
+    }
+    @media screen and (max-width: 960px) {
+        .wrapper {
+            display: grid;
+            grid-template-columns:repeat(2, minmax(300px, 1fr));
+            grid-row-gap:  2em;
+            grid-column-gap:  1.5em;
+            
+        }
+    }
+    @media screen and (max-width: 680px) {
+        .wrapper {
+            display: grid;
+            grid-template-columns:repeat(1, minmax(300px, 1fr));
+            grid-row-gap:  2em;
+            
+        }
+    }
+</style>
+<body>
+    <main class="wrapper">
+        <div>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis sed cupiditate tempora necessitatibus enim repellendus quisquam obcaecati sapiente ipsum, atque illum praesentium corporis, minima delectus porro? Temporibus recusandae qui doloribus.
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis sed cupiditate tempora necessitatibus enim repellendus quisquam obcaecati sapiente ipsum, atque illum praesentium corporis, minima delectus porro? Temporibus recusandae qui doloribus.
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis sed cupiditate tempora necessitatibus enim repellendus quisquam obcaecati sapiente ipsum, atque illum praesentium corporis, minima delectus porro? Temporibus recusandae qui doloribus.
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis sed cupiditate tempora necessitatibus enim repellendus quisquam obcaecati sapiente ipsum, atque illum praesentium corporis, minima delectus porro? Temporibus recusandae qui doloribus.
+        </div>
+    </main>
+</body>
+</html>
