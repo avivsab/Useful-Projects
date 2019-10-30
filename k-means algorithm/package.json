@@ -30,7 +30,7 @@
     "express": "^4.16.4",
     "get": "^1.4.0",
     "get-stream": "^5.0.0",
-    "mongoose": "^5.4.19",
+    "mongoose": "^5.7.5",
     "mustache": "^3.0.1",
     "node-kmeans": "^1.1.8",
     "sanitize-html": "^1.20.0",
